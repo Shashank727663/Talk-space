@@ -6,7 +6,8 @@ const chatModel = mongoose.Schema(
     isGrouchat: { type: Boolean, default: false },
     users: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     latestMessage: { type: mongoose.Schema.Types.ObjectId, ref: "Message" },
-    Admin: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
+    Admin: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    groupAdmin: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   },
   {
     timestamps: true
